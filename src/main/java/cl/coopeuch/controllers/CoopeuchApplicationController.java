@@ -22,12 +22,12 @@ public class CoopeuchApplicationController {
 
     @RequestMapping( path = "add", method = RequestMethod.POST)
     public ResponseEntity<String> add(@Valid @RequestBody AddRequest addRequest){
-        return new ResponseEntity<>(applicationBusiness.add(addRequest.getDescription(), addRequest.isCurrent()), HttpStatus.OK);
+        return new ResponseEntity<>(applicationBusiness.add(addRequest.getDescription(), addRequest.getCurrent()), HttpStatus.OK);
     }
 
     @RequestMapping( path = "edit", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> edit(@Valid @RequestBody EditRequest editRequest){
-        return new ResponseEntity<>(applicationBusiness.edit(editRequest.getId(), editRequest.getDescription(), editRequest.isCurrent()), HttpStatus.OK);
+        return new ResponseEntity<>(applicationBusiness.edit(editRequest.getId(), editRequest.getDescription(), editRequest.getCurrent()), HttpStatus.OK);
     }
 
     @RequestMapping( path = "get", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)

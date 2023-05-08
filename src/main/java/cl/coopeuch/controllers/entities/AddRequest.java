@@ -14,6 +14,6 @@ public class AddRequest {
     private String description;
 
     @NotNull(message = "Current can not be null")
-    private boolean current;
+    private Boolean current;
 
 }

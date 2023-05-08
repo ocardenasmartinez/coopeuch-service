@@ -8,14 +8,14 @@ import javax.validation.constraints.NotNull;
 @Data
 public class EditRequest {
 
-    @NotNull
-    private int id;
+    @NotNull(message = "Id can not be null")
+    private Integer id;
 
     @NotNull(message = "Description can not be null")
     @NotEmpty(message = "Please enter description")
     private String description;
 
-    @NotNull
-    private boolean current;
+    @NotNull(message = "Current can not be null")
+    private Boolean current;
 
 }
