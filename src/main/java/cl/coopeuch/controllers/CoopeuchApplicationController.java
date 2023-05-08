@@ -26,7 +26,7 @@ public class CoopeuchApplicationController {
     }
 
     @RequestMapping( path = "edit", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> edit(@RequestBody EditRequest editRequest){
+    public ResponseEntity<String> edit(@Valid @RequestBody EditRequest editRequest){
         return new ResponseEntity<>(applicationBusiness.edit(editRequest.getId(), editRequest.getDescription(), editRequest.isCurrent()), HttpStatus.OK);
     }
 
