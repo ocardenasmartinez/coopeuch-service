@@ -18,3 +18,7 @@
     "description": "description_6",
     "current": false
 }
+
+### Swagger
+### http://localhost:8080/coopeuch/edit
+http://localhost:8080/coopeuch/swagger-ui/
